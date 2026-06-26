@@ -1,0 +1,118 @@
+{
+  "displayName": "BeatForge",
+  "projectSlug": "beatforge",
+  "tokenKey": "beatforge_token",
+  "userKey": "beatforge_user",
+  "themeKey": "beatforge_theme",
+  "demoEmail": "demo@beatforge.com.tr",
+  "companyName": "Müzik Keşif A.Ş.",
+  "tagline": "Premium Akıl",
+  "meta": {
+    "title": "BeatForge — Akıllı Müzik Keşif Intelligence",
+    "description": "Taste drift inbox, dinleme oturumu ısı haritası ve playlist cohesion cascade radarı — Spotify kalitesinde Türkçe SaaS."
+  },
+  "landing": {
+    "heroBadge": "Spotify kalitesinde, taste intelligence ile",
+    "heroTitlePrefix": "Küratörler için",
+    "heroHighlight": "taste-aware",
+    "heroTitleSuffix": "müzik keşif platformu",
+    "heroSubtitle": "BeatForge; keşif yorgunluğu inbox, dinleme oturumu ısı haritası, playlist cohesion cascade radarı ve KVKK denetçisini tek platformda birleştirir.",
+    "featuresSectionTitle": "Spotify'yi aşan üç mutasyon",
+    "featuresSectionSubtitle": "Built-in taste drift intelligence, oturum analitiği ve cohesion cascade — harici eklenti gerektirmez.",
+    "features": [
+      {
+        "icon": "Sparkles",
+        "title": "Taste Drift Intelligence Inbox",
+        "desc": "Skip spike ve mood drift'leri severity skoruyla önceliklendirin — otomatik kürasyon kuralları ve keşif cluster tespiti."
+      },
+      {
+        "icon": "TrendingUp",
+        "title": "Dinleme Oturumu Isı Haritası",
+        "desc": "Playlist × oturum grid, skip decay skoru ve erken bırakma uyarıları."
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Playlist Cohesion Cascade Radarı",
+        "desc": "Parça ekleme/çıkarmada downstream mood referans etki önizlemesi."
+      },
+      {
+        "icon": "Music",
+        "title": "Playlist Yönetimi",
+        "desc": "Chill Vibes, Workout Energy ve Late Night Jazz playlistleri — parça inspector ve oturum planlama."
+      },
+      {
+        "icon": "Shield",
+        "title": "KVKK Uyumlu Denetim İzi",
+        "desc": "Her dinleme kaydı ve dinleyici verisi denetim izinde — kurumsal compliance hazır."
+      },
+      {
+        "icon": "Layers",
+        "title": "Gerçek Zamanlı Oturum",
+        "desc": "Dinleyici aktivitesi, skip durumu ve mood skoru — tek workspace'te."
+      }
+    ],
+    "plans": [
+      {
+        "name": "Başlangıç",
+        "price": "Ücretsiz",
+        "period": "",
+        "highlight": false,
+        "items": ["3 playlist", "10 oturum/ay", "Temel taste inbox", "Parça geçmişi", "E-posta desteği"]
+      },
+      {
+        "name": "Pro",
+        "price": "₺349",
+        "period": "/ay",
+        "highlight": true,
+        "items": ["Sınırsız playlist", "100 oturum/ay", "Oturum heatmap", "Auto-skip kuralları", "AI kürasyon kredileri", "Öncelikli destek"]
+      },
+      {
+        "name": "Kurumsal",
+        "price": "Özel",
+        "period": "",
+        "highlight": false,
+        "items": ["Sınırsız kullanıcı", "Cohesion cascade + SSO", "API anahtar matrisi", "Org analytics", "Webhook", "Özel hesap yöneticisi"]
+      }
+    ]
+  },
+  "sidebar": {
+    "primaryAction": "+ Yeni Parça",
+    "navItems": [
+      { "href": "/dashboard", "label": "Çalışma Alanı", "icon": "Music", "badge": false },
+      { "href": "/dashboard/triage", "label": "Taste Inbox", "icon": "Inbox", "badge": true },
+      { "href": "/dashboard/cycle-heatmap", "label": "Oturum Isı Haritası", "icon": "TrendingUp", "badge": false },
+      { "href": "/dashboard/dependencies", "label": "Cohesion Cascade", "icon": "GitBranch", "badge": false }
+    ],
+    "bottomItems": [
+      { "href": "/dashboard/settings", "label": "Ayarlar", "icon": "Settings" },
+      { "href": "/dashboard/team", "label": "Ekip", "icon": "Users" }
+    ]
+  },
+  "workspace": {
+    "documentTitle": "Akıllı Müzik Keşif Mimarisi",
+    "presenceText": "Elif Demir çevrimiçi…",
+    "paragraphs": [
+      "BeatForge, müzik küratörlerinin keşif operasyonunu bir üst seviyeye taşıyan intelligence platformudur.",
+      "Platform; taste drift tespiti, oturum analitiği ve playlist cohesion cascade önizlemesini tek çalışma alanında birleştirir.",
+      "Taste inbox modülü, skip spike'ları severity skoruna göre önceliklendirir."
+    ],
+    "codeSnippet": "function suggestSkip(track) {\n  return tasteEngine.autoCurate(track);\n}",
+    "conflictInbox": {
+      "label": "Taste Drift Gelen Kutusu",
+      "summary": "Chill Vibes × Workout — Mood çakışması",
+      "severity": "Yüksek",
+      "lines": ["03:24", "04:12"],
+      "actionLabel": "Kürasyon Öner"
+    },
+    "versions": []
+  },
+  "stitchScreens": {
+    "enabled": true,
+    "routes": [
+      { "match": "Workspace", "route": "frontend/src/app/dashboard/page.tsx" },
+      { "match": "Metrics", "route": "frontend/src/app/dashboard/cycle-heatmap/page.tsx" },
+      { "match": "Settings", "route": "frontend/src/app/dashboard/settings/page.tsx" },
+      { "match": "Landing", "route": "frontend/src/app/page.tsx" }
+    ]
+  }
+}

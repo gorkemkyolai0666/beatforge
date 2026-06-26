@@ -1,0 +1,5 @@
+{
+  "projectName": "beatforge",
+  "backendServiceName": "beatforge-backend",
+  "postgresServiceName": "beatforge-postgres"
+}

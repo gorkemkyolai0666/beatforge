@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 165 17% 5%;
+    --foreground: 140 10% 88%;
+    --card: 160 13% 9%;
+    --card-foreground: 140 10% 88%;
+    --primary: 141 73% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 100% 69%;
+    --secondary-foreground: 216 60% 10%;
+    --muted: 160 13% 9%;
+    --muted-foreground: 110 15% 76%;
+    --accent: 250 100% 69%;
+    --accent-foreground: 216 60% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 58% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 250 100% 69%;
+    --warning-foreground: 216 60% 10%;
+    --border: 200 20% 22%;
+    --input: 160 13% 9%;
+    --ring: 141 73% 42%;
+    --radius: 0.75rem;
+  }
+
+  .light {
+    --background: 240 20% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --primary: 141 73% 42%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 250 100% 69%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 20% 96%;
+    --muted-foreground: 215 16% 40%;
+    --accent: 250 100% 69%;
+    --accent-foreground: 0 0% 100%;
+    --border: 240 20% 90%;
+    --input: 0 0% 100%;
+    --ring: 141 73% 42%;
+  }
+
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body), 'Sora', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-body), 'Sora', system-ui, sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-mono), 'Jetbrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-xl border border-white/10 shadow-brand-glow backdrop-blur-md;
+    background: rgba(20, 26, 24, 0.72);
+  }
+  .surface-card {
+    @apply rounded-xl border border-white/10 shadow-brand-glow backdrop-blur-md transition-all duration-200 ease-in-out;
+    background: rgba(20, 26, 24, 0.72);
+  }
+  .forge-hero {
+    @apply relative overflow-hidden bg-background;
+    background-image:
+      radial-gradient(ellipse at 20% 30%, rgba(29, 185, 84, 0.18) 0%, transparent 52%),
+      radial-gradient(ellipse at 80% 70%, rgba(123, 97, 255, 0.12) 0%, transparent 48%);
+  }
+  .doc-page {
+    @apply mx-auto max-w-3xl rounded-xl border border-border bg-card p-10 shadow-brand-glow;
+  }
+  .conflict-inbox-card {
+    @apply rounded-xl border border-white/10 shadow-brand-glow backdrop-blur-md border-l-4 border-l-primary p-6;
+    background: rgba(20, 26, 24, 0.72);
+  }
+  .input-field {
+    @apply flex h-10 w-full rounded-lg border border-border bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground/70 focus-visible:border-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/30;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-brand-glow transition-all duration-200 hover:opacity-90;
+  }
+  .surface-card-accent {
+    @apply rounded-xl border border-white/10 shadow-brand-glow backdrop-blur-md transition-all duration-200 ease-in-out border-primary/40 ring-2 ring-primary/20;
+    background: rgba(20, 26, 24, 0.72);
+  }
+}
+/* === STITCH HTML STYLES (auto-generated) === */
+/* Stitch inline styles extracted from htmlCode */
+/* BeatForge Analytics */
+body { background-color: #0A0E0D; } /* Midnight Vinyl Base */
+        .glass-card {
+            background-color: #141A18; /* Deep Slate Layer 1 */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 20px rgba(83, 224, 118, 0.15); /* Emerald Ambient Glow */
+            border-color: rgba(83, 224, 118, 0.3);
+        }
+        
+        /* Heatmap Grid Specifics */
+        .heatmap-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 2px; }
+        .hm-low { background-color: rgba(83, 224, 118, 0.2); } /* Emerald */
+        .hm-mid { background-color: rgba(201, 191, 255, 0.4); } /* Violet blend */
+        .hm-high { background-color: rgba(255, 180, 171, 0.6); } /* Crimson/Error blend */
+        .hm-severe { background-color: rgba(147, 0, 10, 0.8); }
+        
+        .sparkline-svg { stroke: #53e076; fill: none; stroke-width: 2; stroke-linecap: round; }
+        .sparkline-svg.complex { stroke: #c9bfff; } /* Violet for complex trends */
+
+/* BeatForge Landing Page */
+.glass-card {
+            background: rgba(20, 26, 24, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .emerald-glow {
+            box-shadow: 0 0 40px rgba(83, 224, 118, 0.15);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #dee4e0 0%, #53e076 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Landing page specifically suppresses standard navigation shell as per logic */
+
+/* BeatForge Workspace */
+body {
+            background-color: #0A0E0D;
+            color: #dee4e0;
+        }
+        .glass-panel {
+            background-color: #141A18;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+        .glass-overlay {
+            background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(20,26,24,0.95) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+        }
+        .ambient-glow:hover {
+            box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
+            border-color: rgba(29, 185, 84, 0.5);
+        }
+
+/* BeatForge Settings */
+body { background-color: #0A0E0D; color: #dee4e0; }
+        .glass-panel { background: rgba(20, 26, 24, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
+        .ambient-glow:focus-within, .ambient-glow:hover { box-shadow: 0 0 15px rgba(83, 224, 118, 0.15); border-color: rgba(83, 224, 118, 0.5); }
+        .sheen-top { position: relative; }
+        .sheen-top::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); }
+
+.stitch-screen {
+  min-height: 100vh;
+  width: 100%;
+}
+.stitch-screen img {
+  max-width: 100%;
+  height: auto;
+}
+.stitch-page-content {
+  width: 100%;
+  min-height: 100%;
+}
+.stitch-shell nav a[data-stitch-nav] {
+  cursor: pointer;
+}
+.stitch-shell a[data-stitch-route],
+.stitch-screen a[data-stitch-route],
+.stitch-shell button[data-stitch-action],
+.stitch-screen button[data-stitch-action] {
+  cursor: pointer;
+}
+/* === END STITCH HTML STYLES === */

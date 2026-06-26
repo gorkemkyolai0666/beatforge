@@ -1,0 +1,26 @@
+{
+  "screens": [
+    {
+      "title": "BeatForge Analytics",
+      "slug": "beatforge-analytics"
+    },
+    {
+      "title": "BeatForge Landing Page",
+      "slug": "beatforge-landing-page"
+    },
+    {
+      "title": "BeatForge Workspace",
+      "slug": "beatforge-workspace"
+    },
+    {
+      "title": "BeatForge Settings",
+      "slug": "beatforge-settings"
+    }
+  ],
+  "routes": [
+    "frontend/src/app/dashboard/cycle-heatmap/page.tsx",
+    "frontend/src/app/dashboard/page.tsx",
+    "frontend/src/app/dashboard/settings/page.tsx",
+    "frontend/src/app/page.tsx"
+  ]
+}
